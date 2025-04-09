@@ -26,24 +26,6 @@ class Program
 
             if (opcaoPrincipal == '1')
             {
-                char opcaoEscolhida = telaFabricante.ApresentarMenu();
-
-                switch (opcaoEscolhida)
-                {
-                    case '1': telaFabricante.CadastrarFabricante(); break;
-
-                    case '2': telaFabricante.EditarFabricante(); break;
-
-                    case '3': telaFabricante.ExcluirFabricante(); break;
-
-                    case '4': telaFabricante.VisualizarFabricantes(true); break;
-
-                    default: break;
-                }
-            }
-
-            else if (opcaoPrincipal == '2')
-            {
                 char opcaoEscolhida = telaEquipamento.ApresentarMenu();
 
                 switch (opcaoEscolhida)
@@ -60,7 +42,7 @@ class Program
                 }
             }
 
-            else if (opcaoPrincipal == '3')
+            else if (opcaoPrincipal == '2')
             {
                 char opcaoEscolhida = telaChamado.ApresentarMenu();
 
@@ -77,6 +59,27 @@ class Program
                     default: break;
                 }
             }
+
+            else if (opcaoPrincipal == '3')
+            {
+                char opcaoEscolhida = telaFabricante.ApresentarMenu();
+
+                switch (opcaoEscolhida)
+                {
+                    case '1': telaFabricante.CadastrarFabricante(); break;
+
+                    case '2': telaFabricante.EditarFabricante(); break;
+
+                    case '3': telaFabricante.ExcluirFabricante(); break;
+
+                    case '4': telaFabricante.VisualizarFabricantes(true); break;
+
+                    default: break;
+                }
+            }
+
+            Console.ReadLine();
         }
+
     }
 }
